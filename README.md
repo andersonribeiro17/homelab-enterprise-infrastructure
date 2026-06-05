@@ -2,9 +2,25 @@
 
 ## Sobre o Projeto
 
-Laboratório de infraestrutura corporativa desenvolvido para estudos práticos, validação de tecnologias e documentação de ambientes semelhantes aos encontrados em empresas de médio e grande porte.
+Este laboratório nasceu da proposta de transformar hardware reaproveitado em uma plataforma de estudos voltada para virtualização, infraestrutura, redes, sistemas operacionais e segurança da informação.
 
-O projeto tem como objetivo consolidar conhecimentos em virtualização, sistemas operacionais, redes, monitoramento, segurança da informação, Active Directory, containers e firewall.
+O ambiente foi construído utilizando um servidor baseado em uma placa-mãe Positivo POS-PIQ77CL, processador Intel Core i7-2600 e 24 GB de memória RAM, demonstrando que equipamentos considerados obsoletos ainda podem entregar excelente desempenho quando utilizados de forma estratégica.
+
+O objetivo do projeto é consolidar conhecimentos em virtualização, Linux, Windows Server, Active Directory, DNS, containers, monitoramento, VPN, firewall e boas práticas de infraestrutura corporativa, documentando cada etapa de implantação, configuração e resolução de problemas encontrados durante a evolução do ambiente.
+
+Além do desenvolvimento técnico, o projeto busca incentivar o reaproveitamento de equipamentos e a redução do descarte eletrônico, mostrando que é possível criar um laboratório robusto para estudos e validação de tecnologias sem a necessidade de investimentos elevados em hardware.
+
+Este projeto também reflete a importância da colaboração entre profissionais de tecnologia. Além do esforço individual de planejamento e implementação, o laboratório recebeu apoio de amigos que contribuíram com equipamentos para testes, como switches corporativos e um FortiGate 50E. Essa colaboração tornou possível expandir a infraestrutura e criar cenários mais próximos dos ambientes corporativos reais, enriquecendo o processo de aprendizado e validação das soluções implementadas.
+
+---
+
+## Objetivos
+
+* Consolidar conhecimentos em infraestrutura corporativa
+* Simular ambientes encontrados em empresas de médio e grande porte
+* Documentar processos de implantação e troubleshooting
+* Validar tecnologias de virtualização, redes e segurança
+* Compartilhar conhecimento através do GitHub e LinkedIn
 
 ---
 
@@ -23,6 +39,7 @@ O projeto tem como objetivo consolidar conhecimentos em virtualização, sistema
 
 * Docker
 * Portainer
+* Nginx Proxy Manager
 
 ### Documentação
 
@@ -50,6 +67,21 @@ O projeto tem como objetivo consolidar conhecimentos em virtualização, sistema
 ---
 
 ## Infraestrutura Atual
+
+### Servidor Principal
+
+Hardware:
+
+* Placa-mãe Positivo POS-PIQ77CL
+* Intel Core i7-2600
+* 24 GB DDR3
+* SSD 1 TB
+* HDD Western Digital Blue 1 TB
+* HDD Western Digital Blue 1 TB
+
+Função:
+
+* Host principal Proxmox VE
 
 ### Proxmox
 
@@ -107,6 +139,7 @@ Serviços:
 * [x] Portainer
 * [x] WikiJS
 * [x] Uptime Kuma
+* [x] Nginx Proxy Manager
 * [x] pfSense
 * [x] Active Directory
 * [x] DNS
@@ -115,9 +148,19 @@ Serviços:
 
 ---
 
+## Em Documentação
+
+* [ ] Evidências e screenshots
+* [ ] Diagramas de rede
+* [ ] Procedimentos detalhados
+* [ ] Inventário completo da infraestrutura
+
+---
+
 ## Próximas Etapas
 
 * [ ] FortiGate 50E
+* [ ] Integração do Access Point UniFi U6-Lite
 * [ ] VLANs
 * [ ] SSL VPN
 * [ ] Políticas de Grupo (GPO)
@@ -133,30 +176,60 @@ Serviços:
 
 ### Monitoramento entre Redes
 
-Problema:
+**Problema:**
 
-* Windows Server não respondia ao monitoramento.
+* Windows Server não respondia ao monitoramento realizado pelo Uptime Kuma.
 
-Causa:
+**Causa:**
 
 * Regra WAN do pfSense configurada incorretamente.
 
-Solução:
+**Solução:**
 
-* Ajuste das regras de firewall e roteamento.
+* Ajuste das regras de firewall e roteamento entre as redes.
+
+**Resultado:**
+
+* Comunicação restabelecida e monitoramento funcional.
 
 ---
 
 ### Acesso Remoto sob CGNAT
 
-Problema:
+**Problema:**
 
-* Operadora utiliza CGNAT.
+* Operadora utiliza CGNAT, impossibilitando acesso remoto tradicional por redirecionamento de portas.
 
-Solução:
+**Solução:**
 
-* Implementação do Tailscale como Subnet Router.
+* Implementação do Tailscale utilizando o Ubuntu Server como Subnet Router.
 
-Resultado:
+**Resultado:**
 
-* Acesso remoto ao Proxmox, pfSense e servidores sem necessidade de AnyDesk.
+* Acesso remoto ao Proxmox, pfSense e servidores internos sem necessidade de AnyDesk ou abertura de portas na internet.
+
+---
+
+## Estrutura da Documentação
+
+A documentação detalhada de cada etapa do laboratório encontra-se na pasta `docs`.
+
+* 01-proxmox
+* 02-ubuntu-server
+* 03-docker
+* 04-portainer
+* 05-wikijs
+* 06-uptime-kuma
+* 07-pfsense
+* 08-active-directory
+* 09-dns
+* 10-tailscale
+* 11-troubleshooting
+
+---
+
+## Status do Projeto
+
+🟢 Ambiente operacional e em constante evolução.
+
+Atualmente o laboratório possui virtualização, containers, monitoramento, firewall, Active Directory, DNS e acesso remoto seguro em funcionamento, servindo como plataforma para estudos, validação de tecnologias e documentação de boas práticas de infraestrutura corporativa.
