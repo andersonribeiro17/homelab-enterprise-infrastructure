@@ -8,31 +8,31 @@
 
 ## Infraestrutura Base
 
-- 01 - Proxmox VE
-- 02 - Ubuntu Server
-- 03 - Docker
-- 04 - Portainer
-- 05 - WikiJS
-- 06 - Uptime Kuma
+* 01 - Proxmox VE
+* 02 - Ubuntu Server
+* 03 - Docker
+* 04 - Portainer
+* 05 - WikiJS
+* 06 - Uptime Kuma
 
 ## Redes e Segurança
 
-- 07 - pfSense
-- 09 - DNS
-- 10 - Tailscale
-- 12 - FortiGate 50E
+* 07 - pfSense
+* 10 - Tailscale
+* 12 - FortiGate 50E
 
 ## Serviços Corporativos
 
-- 08 - Active Directory
+* 08 - Active Directory
+* 09 - DNS
 
 ## Operação e Suporte
 
-- 11 - Troubleshooting
+* 11 - Troubleshooting
 
 ## Infraestrutura Física
 
-- 13 - Infraestrutura Física
+* 13 - Infraestrutura Física
 
 ---
 
@@ -40,14 +40,14 @@
 
 Esta área contém toda a documentação técnica do Homelab, incluindo:
 
-- Implantação dos serviços
-- Configuração dos equipamentos
-- Evidências e capturas de tela
-- Procedimentos de instalação
-- Solução de problemas
-- Diagramas de rede
-- Inventário da infraestrutura
-- Boas práticas adotadas
+* Implantação dos serviços
+* Configuração dos equipamentos
+* Evidências e capturas de tela
+* Procedimentos de instalação
+* Solução de problemas
+* Diagramas de rede
+* Inventário da infraestrutura
+* Boas práticas adotadas
 
 ---
 
@@ -82,33 +82,33 @@ Switch HPE 1920S
 
 # Infraestrutura Atual
 
-| Equipamento | Função | IP |
-|------------|---------|---------|
-| FortiGate 50E | Firewall Principal | 192.168.1.1 |
-| HPE OfficeConnect 1920S | Switch Core | 192.168.1.2 |
-| Proxmox VE | Host de Virtualização | 192.168.1.101 |
-| Ubuntu Server | Serviços Docker | 192.168.1.110 |
-| Windows Server 2022 | Active Directory e DNS | 192.168.1.20 |
+| Equipamento             | Função                 | IP            |
+| ----------------------- | ---------------------- | ------------- |
+| FortiGate 50E           | Firewall Principal     | 192.168.1.1   |
+| HPE OfficeConnect 1920S | Switch Core            | 192.168.1.2   |
+| Proxmox VE              | Host de Virtualização  | 192.168.1.101 |
+| Ubuntu Server           | Serviços Docker        | 192.168.1.110 |
+| Windows Server 2022     | Active Directory e DNS | 192.168.1.20  |
 
 ---
 
 # Status da Documentação
 
-| Componente | Status |
-|------------|---------|
-| Proxmox VE | ✅ Operacional |
-| Ubuntu Server | ✅ Operacional |
-| Docker | ✅ Operacional |
-| Portainer | ✅ Operacional |
-| WikiJS | ✅ Operacional |
-| Uptime Kuma | ✅ Operacional |
-| pfSense | 🧪 Ambiente de Laboratório |
-| Active Directory | ✅ Operacional |
-| DNS | ✅ Operacional |
-| Tailscale | ✅ Operacional |
-| FortiGate 50E | ✅ Operacional |
-| Troubleshooting | 📝 Em Documentação |
-| Infraestrutura Física | 📝 Em Documentação |
+| Componente            | Status                     |
+| --------------------- | -------------------------- |
+| Proxmox VE            | ✅ Operacional              |
+| Ubuntu Server         | ✅ Operacional              |
+| Docker                | ✅ Operacional              |
+| Portainer             | ✅ Operacional              |
+| WikiJS                | ✅ Operacional              |
+| Uptime Kuma           | ✅ Operacional              |
+| pfSense               | 🧪 Ambiente de Laboratório |
+| Active Directory      | ✅ Operacional              |
+| DNS                   | ✅ Operacional              |
+| Tailscale             | ✅ Operacional              |
+| FortiGate 50E         | ✅ Operacional              |
+| Troubleshooting       | 📝 Em Documentação         |
+| Infraestrutura Física | 📝 Em Documentação         |
 
 ---
 
@@ -116,39 +116,39 @@ Switch HPE 1920S
 
 ## Virtualização
 
-- Proxmox VE
+* Proxmox VE
 
 ## Sistemas Operacionais
 
-- Ubuntu Server
-- Windows Server 2022
+* Ubuntu Server
+* Windows Server 2022
 
 ## Containers
 
-- Docker
-- Portainer
+* Docker
+* Portainer
 
 ## Documentação
 
-- WikiJS
+* WikiJS
 
 ## Monitoramento
 
-- Uptime Kuma
+* Uptime Kuma
 
 ## Firewall e Segurança
 
-- FortiGate 50E
-- pfSense
+* FortiGate 50E
+* pfSense
 
 ## Serviços de Diretório
 
-- Active Directory Domain Services (AD DS)
-- DNS
+* Active Directory Domain Services (AD DS)
+* DNS
 
 ## Acesso Remoto
 
-- Tailscale
+* Tailscale
 
 ---
 
@@ -157,6 +157,8 @@ Switch HPE 1920S
 O objetivo deste Homelab é consolidar conhecimentos em infraestrutura corporativa utilizando equipamentos reaproveitados e tecnologias amplamente utilizadas em ambientes empresariais.
 
 A documentação busca registrar todas as etapas de implantação, configuração, troubleshooting e evolução do ambiente, servindo como material de estudo, portfólio técnico e base de consulta para futuras implementações.
+
+Além do desenvolvimento técnico, o projeto incentiva o reaproveitamento de hardware e a redução do descarte eletrônico, demonstrando que é possível construir um ambiente robusto para estudos e validação de tecnologias utilizando equipamentos que seriam descartados.
 
 ---
 
